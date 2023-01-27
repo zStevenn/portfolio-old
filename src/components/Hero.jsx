@@ -24,7 +24,7 @@ function Hero() {
 					</a>
 				</div>
 			</div>
-			<img src={HeroImage} alt="Steven Li" />
+			<img src={HeroImage} className="grayscale" alt="Steven Li" />
 		</div>
 	)
 }
