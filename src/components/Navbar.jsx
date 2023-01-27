@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { MdMenu, MdClose } from "react-icons/md"
 
 const Navbar = () => {
 	const [showNav, setShowNav] = useState()
@@ -6,7 +7,7 @@ const Navbar = () => {
 
 	// Array of nav items with id and name.
 	const navElements = [
-		{ id: "hero", name: "Home" },
+		{ id: "", name: "Home" },
 		{ id: "overmij", name: "Over Mij" },
 		{ id: "contact", name: "Contact" },
 		{ id: "services", name: "Services" },
@@ -52,7 +53,7 @@ const Navbar = () => {
 			>
 				{/* Hamburger Icon */}
 				<span className="lg:hidden text-slate-50 text-xl" onClick={toggleNav}>
-					{showNav ? "x" : "="}
+					{showNav ? <MdClose className="text-3xl" /> : <MdMenu  className="text-3xl"/>}
 				</span>
 				{/* Webpage Title */}
 				<h1 className="text-slate-50 text-xl">Steven Li</h1>
@@ -78,7 +79,7 @@ const Navbar = () => {
 						className={`text-slate-50 px-8 py-4 fixed top-[10vh] right-0 left-0 bg-neutral-900 border-bottom`}
 					>
 						{navElements.map(({ id, name }) => (
-							<li className="my-2" key={id}>
+							<li className="my-2" key={id} onClick={toggleNav}>
 								<a href={`#${id}`}>{name}</a>
 							</li>
 						))}
