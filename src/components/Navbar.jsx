@@ -34,24 +34,13 @@ const Navbar = () => {
 	function handleClick(event, id) {
 		event.preventDefault()
 		const element = document.getElementById(id)
-
-		// Add class to element to scroll to
-		element.classList.add("pt-[10vh]")
-
 		// Scroll to element
 		element.scrollIntoView({
 			behavior: "smooth",
 			block: "start",
 			inline: "nearest",
 		})
-
-		// Remove class after 1 second
-		setTimeout(() => {
-			element.classList.remove("pt-[10vh]");
-		}, 1000);
-		
 	}
-	
 
 	// Toggles Navigation based on click
 	const toggleNav = () => {
