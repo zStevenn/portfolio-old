@@ -2,7 +2,7 @@ import HeroImage from "../assets/svg/profile.svg"
 
 function Hero() {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center px-8 py-16">
+		<div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center py-16">
 			<div className="text-slate-50 text-center" id="hero">
 				<p className="text-2xl mb-2">Hey!</p>
 				<h1 className="text-3xl tracking-wide mb-2">
