@@ -1,7 +1,7 @@
 function Skills() {
 	return (
 		<div
-			className="grid grid-cols-1 place-content-center gap-4 my-4 "
+			className="grid grid-cols-1 place-content-center gap-4 my-4 min-h-screen"
 			id="vaardigheden"
 		>
 			<h1 className="text-slate-50 text-center text-2xl font-semibold py-6">

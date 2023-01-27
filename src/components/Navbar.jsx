@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { MdMenu, MdClose } from "react-icons/md"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 const Navbar = () => {
 	const [showNav, setShowNav] = useState()
-	const [isSticky, setSticky] = useState(false)
 
 	// Array of nav items with id and name.
 	const navElements = [
@@ -14,23 +14,6 @@ const Navbar = () => {
 		{ id: "projecten", name: "Projecten" },
 	]
 
-	//useEffect to track user scroll
-	useEffect(() => {
-		function handleScroll() {
-			if (window.pageYOffset > 50) {
-				setSticky(true)
-			} else {
-				setSticky(false)
-			}
-		}
-
-		window.addEventListener("scroll", handleScroll)
-
-		return () => {
-			window.removeEventListener("scroll", handleScroll)
-		}
-	}, [])
-
 	function handleClick(event, id) {
 		event.preventDefault()
 		const element = document.getElementById(id)
@@ -38,7 +21,8 @@ const Navbar = () => {
 		element.scrollIntoView({
 			behavior: "smooth",
 			block: "start",
-			inline: "nearest",
+			inline: "start",
+			offsetTop: -500,
 		})
 	}
 
@@ -52,9 +36,7 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between items-center px-8 py-2 min-h-[10vh] z-50 bg-neutral-800 ${
-					isSticky ? "fixed top-0 w-full" : ""
-				}`}
+				className={`flex justify-between items-center px-8 py-2 h-[10vh] z-50 bg-neutral-800 fixed top-0 w-full`}
 			>
 				{/* Hamburger Icon */}
 				<span className="lg:hidden text-slate-50 text-xl" onClick={toggleNav}>
@@ -70,9 +52,16 @@ const Navbar = () => {
 				<ul className="hidden lg:flex gap-8 text-slate-50 text-lg">
 					{navElements.map(({ id, name }) => (
 						<li key={id}>
-							<a href="#" onClick={e => handleClick(e, id)}>
+							<Link
+								activeClass="active"
+								to={id}
+								spy={true}
+								smooth={true}
+								offset={-75}
+								duration={500}
+							>
 								{name}
-							</a>
+							</Link>
 						</li>
 					))}
 				</ul>
@@ -90,10 +79,18 @@ const Navbar = () => {
 						className={`text-slate-50 px-8 py-4 fixed top-[10vh] right-0 left-0 bg-neutral-800 border-bottom z-50`}
 					>
 						{navElements.map(({ id, name }) => (
-							<li className="my-2" key={id} onClick={toggleNav}>
-								<a href="#" onClick={e => handleClick(e, id)}>
+							<li className="my-2" key={id}>
+								<Link
+									activeClass="active"
+									to={id}
+									spy={true}
+									smooth={true}
+									offset={-75}
+									duration={500}
+									onClick={toggleNav}
+								>
 									{name}
-								</a>
+								</Link>
 							</li>
 						))}
 					</ul>

@@ -1,7 +1,7 @@
 function Projects() {
 	return (
 		<div
-			className="grid grid-cols-1 place-content-center gap-4 px-6 py-4 min-h-[90vh]"
+			className="grid grid-cols-1 place-content-center gap-4 py-4 min-h-screen"
 			id="projecten"
 		>
 			<h1 className="text-slate-50 text-center text-2xl font-semibold py-8">
