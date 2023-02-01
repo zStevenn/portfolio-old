@@ -64,8 +64,7 @@ const Navbar = () => {
 						className={`text-slate-50 px-8 py-4 fixed right-0 left-0 bg-neutral-800 border-bottom z-50 shadow-lg`}
 					>
 						<div className="flex justify-between py-4">
-						<MdClose className="text-3xl" onClick={toggleNav} />
-
+							<MdClose className="text-3xl" onClick={toggleNav} />
 						</div>
 						{navElements.map(({ id, name }) => (
 							<li className="my-2" key={id}>
@@ -83,7 +82,10 @@ const Navbar = () => {
 							</li>
 						))}
 					</ul>
-					<div className="fixed z-10 inset-0 opacity-90 bg-neutral-900" />
+					<div
+						onClick={toggleNav}
+						className="fixed z-10 inset-0 opacity-90 bg-neutral-900"
+					/>
 				</>
 			)}
 			{/* Einde Navbar */}
