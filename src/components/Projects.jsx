@@ -1,24 +1,28 @@
+import { SiDiscord } from "react-icons/si"
+import Title from "./Title"
+import Project1 from "../assets/static/cafetaria-de-sluis.png"
+
 function Projects() {
 	return (
 		<div
-			className="grid grid-cols-1 place-content-center gap-4 py-4 min-h-screen"
+			className="mb-40"
 			id="projecten"
 		>
-			<h1 className="text-slate-50 text-center text-2xl font-semibold py-8">
-				<span className="text-slate-200 pr-2">#</span>Projecten
-			</h1>
-			<div className="grid grid-cols-2 lg:grid-cols-4 place-content-center gap-8">
-				<div>
-					<h2 className="text-slate-50 text-center my-4 text-xl">
-						Project titel 1
-					</h2>
-					<img src="https://via.placeholder.com/600x600" />
+			<Title text="Projecten" />
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center gap-8">
+				<div className="flex flex-col">
+					<h3 className="text-slate-50 text-center my-4 text-xl">
+						Cafetaria de Sluis
+					</h3>
+					<a href="https://cafetariadesluis.nl" target="_blank">
+						<img src={Project1} />
+					</a>
 				</div>
-				<div>
-					<h2 className="text-slate-50 text-center my-4 text-xl">
-						Project titel 1
-					</h2>
-					<img src="https://via.placeholder.com/600x600" />
+				<div className="flex flex-col items-center">
+					<h3 className="text-slate-50 text-center my-4 text-xl">
+						Discord Bot
+					</h3>
+					<SiDiscord className="text-8xl text-slate-50" />
 				</div>
 			</div>
 		</div>

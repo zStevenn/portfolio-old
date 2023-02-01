@@ -2,13 +2,13 @@ import HeroImage from "../assets/svg/profile.svg"
 
 function Hero() {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 place-items-center py-16" id="hero">
+		<div className="grid grid-cols-1 gap-8 md:grid-cols-2 place-items-center py-16 h-screen" id="hero">
 			<div className="text-slate-50 text-center">
-				<p className="text-2xl mb-2">Hey!</p>
-				<h1 className="text-3xl tracking-wide mb-2">
+				<p className="text-2xl md:text-3xl xl:text-5xl mb-2">Hey!</p>
+				<h1 className="text-3xl md:text-4xl xl:text-6xl tracking-wide mb-2">
 					Ik ben <strong className="text-red-800">Steven Li,</strong>
 				</h1>
-				<h1 className="text-3xl tracking-wide mb-4">Software developer.</h1>
+				<h1 className="text-3xl md:text-4xl xl:text-6xl tracking-wide mb-4">Softwaredeveloper.</h1>
 				<div className="flex justify-center gap-8">
 					<a
 						href="#contact"

@@ -1,28 +1,41 @@
+import Title from "./Title"
+import {
+	SiCss3,
+	SiHtml5,
+	SiJavascript,
+	SiPhp,
+	SiReact,
+	SiTailwindcss,
+} from "react-icons/si"
+
 function Skills() {
 	return (
-		<div
-			className="grid grid-cols-1 place-content-center gap-4 my-4 min-h-screen"
-			id="vaardigheden"
-		>
-			<h1 className="text-slate-50 text-center text-2xl font-semibold py-6">
-				<span className="text-slate-200 pr-2">#</span>Vaardigheden
-			</h1>
-			<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-				<div className="bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
-					<p className="text-slate-50 text-center pb-4">HTML5</p>
-					<img src="https://loremflickr.com/300/300" />
+		<div className="mb-40" id="vaardigheden">
+			<Title text="Vaardigheden" />
+			<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+				<div className="flex flex-col justify-center items-center bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
+					<h3 className="text-slate-50 pb-4">HTML5</h3>
+					<SiHtml5 className="text-8xl text-slate-50" />
 				</div>
-				<div className="bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
-					<p className="text-slate-50 text-center pb-4">CSS</p>
-					<img src="https://loremflickr.com/300/300" />
+				<div className="flex flex-col justify-center items-center bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
+					<h3 className="text-slate-50 pb-4">CSS</h3>
+					<SiCss3 className="text-8xl text-slate-50" />
 				</div>
-				<div className="bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
-					<p className="text-slate-50 text-center pb-4">Javascript</p>
-					<img src="https://loremflickr.com/300/300" />
+				<div className="flex flex-col justify-center items-center bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
+					<h3 className="text-slate-50 pb-4">Javascript</h3>
+					<SiJavascript className="text-8xl text-slate-50" />
 				</div>
-				<div className="bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
-					<p className="text-slate-50 text-center pb-4">Libraries</p>
-					<img src="https://loremflickr.com/300/300" />
+				<div className="flex flex-col justify-center items-center bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
+					<h3 className="text-slate-50 pb-4">PHP</h3>
+					<SiPhp className="text-8xl text-slate-50" />
+				</div>
+				<div className="flex flex-col justify-center items-center bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
+					<h3 className="text-slate-50 pb-4">React</h3>
+					<SiReact className="text-8xl text-slate-50" />
+				</div>
+				<div className="flex flex-col justify-center items-center bg-red-500 border-b-2 border-r-2 border-red-800 px-3 py-6 shadow shadow-red-800 hover:shadow-md">
+					<h3 className="text-slate-50 pb-4">Tailwind</h3>
+					<SiTailwindcss className="text-8xl text-slate-50" />
 				</div>
 			</div>
 		</div>

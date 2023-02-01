@@ -1,15 +1,11 @@
+import Title from "./Title"
+
 function Aboutme() {
 	return (
-		<div
-			className="grid grid-cols-1 place-content-center gap-4 py-4 min-h-screen"
-			id="overmij"
-		>
-			<h1 className="text-slate-50 text-center text-2xl font-semibold py-6">
-				<span className="text-slate-200 pr-2">#</span>Over mij
-			</h1>
-			<div className="md:flex md:gap-16">
-				<img className="hidden md:block" src="./src/img/profile.svg" />
-				<div className="text-slate-50">
+		<div className="pb-40" id="overmij">
+			<Title text="Over mij" />
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center gap-8">
+				<div className="text-slate-50 lg:col-start-2 lg:col-span-2">
 					<p className="mb-4">
 						Als laatstejaarsstudent software developer met een passie voor
 						front-end, creëer ik gebruiksvriendelijke en mooie websites en

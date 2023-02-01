@@ -1,24 +1,35 @@
+import Title from "./Title"
+import { MdOutlineMail } from "react-icons/md"
+import { BsLinkedin, BsWhatsapp } from "react-icons/bs"
+
 function Contact() {
 	return (
-		<div
-			className="grid grid-cols-1 place-content-center gap-4 py-4 min-h-screen"
-			id="contact"
-		>
-			<h1 className="text-slate-50 text-center text-2xl font-semibold py-8">
-				<span className="text-slate-200 pr-2">#</span>Contact
-			</h1>
-			<div className="flex flex-col md:flex-row gap-4">
-				<div className="text-slate-50">
-					<p>
+		<div className="pb-40" id="contact">
+			<Title text="Contact" />
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center gap-8">
+				<div className="text-slate-50 lg:col-span-2">
+					<p className="tracking-wide mb-4">
 						Bedankt dat je mijn contactpagina bezoekt! Als je vragen hebt of
 						interesse hebt in mijn werk, aarzel dan niet om contact met me op te
 						nemen. Je kunt me bereiken via e-mail of via een van de social
 						media-links hieronder. Ik kijk ernaar uit om van je te horen!
 					</p>
 					<ul>
-						<li>(icon) stevenli.inbox@gmail.com</li>
-						<li>(icon) (06) - 409 17 668 (WhatsApp)</li>
-						<li>(icon) LinkedIn</li>
+						<li>
+							<a href="mailto:stevenli.inbox@gmail.com" target="_blank">
+								<MdOutlineMail className="inline mr-2" />
+								stevenli.inbox@gmail.com
+							</a>
+						</li>
+						<li>
+							<BsWhatsapp className="inline mr-2" />
+							(06) - 409 17 668
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/zstevenn/" target="_blank">
+								<BsLinkedin className="inline mr-2" /> LinkedIn
+							</a>
+						</li>
 					</ul>
 				</div>
 				<form className="bg-red-500 p-6">
