@@ -2,7 +2,7 @@ import Title from "./Title"
 
 function Services() {
 	return (
-		<div className="pb-40" id="services">
+		<div className="mb-40" id="services">
 			<Title text="Services" />
 			<div className="grid grid-cols-1 md:grid-cols-2 place-content-center gap-8">
 				<div className="grid grid-cols-5 text-slate-50 gap-2">
