@@ -1,40 +1,51 @@
-import Title from "./Title"
+import { SiReact, SiTailwindcss, SiFigma, SiNetlify } from "react-icons/si"
 
 function Aboutme() {
 	return (
-		<div className="pb-40" id="overmij">
-			<Title text="Over mij" />
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center gap-8">
-				<div className="text-slate-50 lg:col-start-2 lg:col-span-2">
-					<p className="mb-4">
-						Als laatstejaarsstudent software developer met een passie voor
-						front-end, creëer ik gebruiksvriendelijke en mooie websites en
-						webapplicaties. Met mijn vaardigheden in HTML, CSS, JavaScript en
-						ervaring met React en Tailwind, ontwikkel ik interactieve en moderne
-						interfaces. Bekijk mijn portfolio om te zien hoe ik mijn
-						vaardigheden toepas en mijn passie voor software ontwikkeling
-						uitdruk.
-					</p>
-					<p className="mb-4">
-						Geïnteresseerd om samen te werken? Ik hoor graag van je!
-					</p>
-					<div className="flex gap-8 mt-4">
-						<a
-							href="#contact"
-							className="px-1 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 text-slate-50 text-lg"
-						>
-							Contact
-						</a>
-						<a
-							href="#projecten"
-							className="px-1 py-2 bg-gray-500 border-b-2 border-r-2 border-gray-800 text-slate-50 text-lg"
-						>
-							Projecten
-						</a>
-					</div>
+		<>
+			<div className="my-24 bg-white" id="overmij">
+				<h1 className="text-neutral-900"># Over mij</h1>
+				<ul className="list-disc">
+					<li>
+						Momenteel bezig met mijn opleiding Softwaredeveloper aan MBO Utrecht
+						waar ik mijn diploma verwacht in Juni 2023.
+					</li>
+					<li>
+						Mijn doel is om innovatieve en effectieve oplossingen te creëren.
+					</li>
+					<li>
+						Ik ben een nauwkeurige probleemoplosser en effectieve teamspeler.
+					</li>
+					<li>
+						Altijd op zoek naar nieuwe manieren om mijn vaardigheden te
+						verbeteren en kennis uit te breiden.
+					</li>
+					<li>Ervaring in HTML, CSS, JavaScript, PHP en UI/UX design.</li>
+				</ul>
+				<p className="text-neutral-900">
+					Gewerkt met programma's, libraries en frameworks zoals:
+				</p>
+			</div>
+
+			<div className="grid grid-cols-2 gap-8">
+				<div className="grid place-items-center bg-neutral-900 border-b-2 border-r-2 border-neutral-800 px-3 py-6 shadow shadow-neutral-800 hover:shadow-md">
+					<h3 className="text-neutral-50 pb-4">Figma</h3>
+					<SiFigma className="text-8xl text-slate-50" />
+				</div>
+				<div className="grid place-items-center bg-neutral-900 border-b-2 border-r-2 border-neutral-800 px-3 py-6 shadow shadow-neutral-800 hover:shadow-md">
+					<h3 className="text-neutral-50 pb-4">Netlify</h3>
+					<SiNetlify className="text-8xl text-slate-50" />
+				</div>
+				<div className="grid place-items-center bg-neutral-900 border-b-2 border-r-2 border-neutral-800 px-3 py-6 shadow shadow-neutral-800 hover:shadow-md">
+					<h3 className="text-neutral-50 pb-4">React</h3>
+					<SiReact className="text-8xl text-slate-50" />
+				</div>
+				<div className="grid place-items-center bg-neutral-900 border-b-2 border-r-2 border-neutral-800 px-3 py-6 shadow shadow-neutral-800 hover:shadow-md">
+					<h3 className="text-neutral-50 pb-4">Tailwind</h3>
+					<SiTailwindcss className="text-8xl text-slate-50" />
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
 
