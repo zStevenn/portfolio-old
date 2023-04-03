@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar"
-import Wrapper from "./components/Wrapper"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Aboutme from "./components/Aboutme"
@@ -10,15 +9,13 @@ function App() {
 	return (
 		<>
 			<Navbar />
-			<Wrapper>
-				<Hero />
-				{/* Vaardigheden */}
-				<Aboutme />
-				{/* Contact */}
-				<Contact />
-				{/* Projecten */}
-				<Projects />
-			</Wrapper>
+			<Hero />
+			{/* Vaardigheden */}
+			<Aboutme />
+			{/* Contact */}
+			<Contact />
+			{/* Projecten */}
+			<Projects />
 			<Footer />
 		</>
 	)
