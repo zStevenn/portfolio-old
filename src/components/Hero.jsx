@@ -3,7 +3,7 @@ import HeroImage from "../assets/static/profile.png"
 function Hero() {
 	return (
 		<div
-			className="grid grid-cols-1 gap-8 md:grid-cols-2 pb-16 pt-32 sm:place-items-center"
+			className="grid grid-cols-1 gap-8 md:grid-cols-2 px-8 pb-16 pt-32 sm:place-items-center"
 			id="hero"
 		>
 			<div className="text-slate-50 w-full grid sm:place-items-center">

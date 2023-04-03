@@ -3,7 +3,7 @@ import { SiReact, SiTailwindcss, SiFigma, SiNetlify } from "react-icons/si"
 function Aboutme() {
 	return (
 		<>
-			<div className="my-24 bg-white" id="overmij">
+			<div className="px-8 my-24 bg-white" id="overmij">
 				<h1 className="text-neutral-900"># Over mij</h1>
 				<ul className="list-disc">
 					<li>
