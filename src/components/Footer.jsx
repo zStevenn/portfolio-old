@@ -1,6 +1,3 @@
-import { BsInstagram, BsLinkedin, BsTwitter, BsDiscord } from "react-icons/bs"
-import { FaTiktok } from "react-icons/fa"
-
 function Footer() {
 	return (
 		<footer className="bg-neutral-900 grid">
