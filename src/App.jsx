@@ -16,14 +16,15 @@ function App() {
 				<Hero />
 				{/* Vaardigheden */}
 				<Skills />
+				{/* Contact */}
+				<Contact />
 				{/* Projecten */}
 				<Projects />
 				{/* Wat ik kan aanbieden */}
 				<Services />
 				{/* Over mij */}
 				<Aboutme />
-				{/* Contact */}
-				<Contact />
+				
 			</Wrapper>
 			<Footer />
 		</>
