@@ -35,7 +35,6 @@ function Skills() {
 					<SiTailwindcss className="text-8xl text-slate-50" />
 				</div>
 			</div>
-		</div>
 	)
 }
 
