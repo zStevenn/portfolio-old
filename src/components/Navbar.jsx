@@ -8,11 +8,9 @@ const Navbar = () => {
 	// Array of nav items with id and name.
 	const navElements = [
 		{ id: "hero", name: "Home" },
-		{ id: "vaardigheden", name: "Vaardigheden" },
-		{ id: "projecten", name: "Projecten" },
-		{ id: "services", name: "Services" },
 		{ id: "overmij", name: "Over Mij" },
 		{ id: "contact", name: "Contact" },
+		{ id: "projecten", name: "Projecten" },
 	]
 
 	// Toggles Navigation based on click
@@ -25,7 +23,7 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between lg:justify-center lg:gap-20 items-center px-8 py-4 z-50 bg-neutral-800 fixed top-0 w-full`}
+				className={`flex justify-between lg:justify-center lg:gap-20 items-center px-8 py-4 z-50 bg-neutral-900 fixed top-0 w-full`}
 			>
 				{/* Hamburger Icon */}
 				<span className="lg:hidden text-slate-50 text-xl" onClick={toggleNav}>
@@ -52,8 +50,8 @@ const Navbar = () => {
 				</ul>
 				{/* CTA Button - Contact Me */}
 				<a
-					href="#contactform"
-					className="hidden sm:block px-1 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 text-slate-50 text-lg"
+					href="#contact"
+					className="hidden sm:block p-2 rounded bg-red-500 border-b-2 border-r-2 border-red-800 text-slate-50 text-lg"
 				>
 					Neem contact
 				</a>
@@ -61,7 +59,11 @@ const Navbar = () => {
 			{showNav && (
 				<>
 					<ul
-						className={`text-slate-50 px-8 py-4 fixed right-0 left-0 bg-neutral-800 border-bottom z-50 shadow-lg`}
+						className={`${
+							showNav
+								? "opacity-100 translate-x-0"
+								: "opacity-0 translate-x-[-100%]"
+						} transition-all duration-500 ease-in-out text-slate-50 px-8 py-4 fixed right-0 left-0 bg-neutral-900 border-bottom z-50 shadow-lg`}
 					>
 						<div className="flex justify-between py-4">
 							<MdClose className="text-3xl" onClick={toggleNav} />
@@ -84,7 +86,7 @@ const Navbar = () => {
 					</ul>
 					<div
 						onClick={toggleNav}
-						className="fixed z-10 inset-0 opacity-90 bg-neutral-900"
+						className="fixed z-40 inset-0 opacity-90 bg-neutral-900"
 					/>
 				</>
 			)}
