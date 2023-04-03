@@ -20,8 +20,6 @@ function App() {
 				<Contact />
 				{/* Projecten */}
 				<Projects />
-				{/* Wat ik kan aanbieden */}
-				<Services />
 				{/* Over mij */}
 				<Aboutme />
 				
