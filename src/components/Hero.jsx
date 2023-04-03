@@ -4,7 +4,7 @@ function Hero() {
 	return (
 		<div
 			className="grid grid-cols-1 gap-8 md:grid-cols-2 px-8 pb-16 pt-32 sm:place-items-center"
-			id="hero"
+			id="hero" 
 		>
 			<div className="text-slate-50 w-full grid sm:place-items-center">
 				<p className="text-2xl md:text-3xl xl:text-5xl mb-2">Hey!</p>
@@ -14,7 +14,7 @@ function Hero() {
 				<h1 className="text-3xl md:text-4xl xl:text-6xl tracking-wide mb-4">
 					Softwaredeveloper.
 				</h1>
-				<div className="flex justify-start gap-8">
+				<div className="flex gap-4">
 					<a
 						download={"Steven Li CV"}
 						href="/src/assets/static/Steven_Li_CV_NL.pdf"

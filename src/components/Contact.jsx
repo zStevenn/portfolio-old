@@ -3,44 +3,52 @@ import { BsLinkedin, BsWhatsapp, BsGithub, BsDiscord } from "react-icons/bs"
 
 function Contact() {
 	return (
-		<div className="my-24 bg-neutral-900" id="contact">
-			<h1 className="text-slate-50 text-2xl font-semibold py-4"># Contact</h1>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-content-center gap-8">
+		<div className="px-8 py-20 bg-neutral-900 grid gap-4 md:grid-cols-2" id="contact">
+			<h1 className="text-slate-50 text-2xl font-semibold md:col-span-2"># Contact</h1>
+			<div className="grid grid-cols-1 gap-8">
 				<div className="text-slate-50 lg:col-span-2">
 					<p className="tracking-wide mb-4">
-						Steven Li Driebergen-Rijsenburg Utrecht, Nederland
-						<a href="mailto:stevenli.inbox@gmail.com" target="_blank">
-							<MdOutlineMail className="inline mr-2" />
-							stevenli.inbox@gmail.com
-						</a>
-						<BsWhatsapp className="inline mr-2" /> (06) - 409 17 668
+						<ul className="grid gap-1">
+							<li>Steven Li</li>
+							<li>Driebergen-Rijsenburg</li>
+							<li className="mb-4">Utrecht, Nederland</li>
+							<li>
+								<a href="mailto:stevenli.inbox@gmail.com" target="_blank">
+									<MdOutlineMail className="inline mr-2" />
+									stevenli.inbox@gmail.com
+								</a>
+							</li>
+							<li>
+								<BsWhatsapp className="inline mr-2" />
+								(06) - 409 17 668
+							</li>
+						</ul>
 					</p>
 				</div>
-				<ul className="flex flex-row justify-between flex-nowrap gap-8">
-					<li className="rounded p-4 hover:scale-110">
+				<ul className="flex flex-row flex-nowrap gap-4">
+					<li className="grid place-items-center hover:scale-110 transition-all">
 						<a href="https://www.linkedin.com/in/zstevenn/" target="_blank">
-							<BsLinkedin className="inline mr-2" />
+							<BsLinkedin className="inline text-slate-50 text-2xl" />
 						</a>
 					</li>
-					<li className="rounded p-4 hover:scale-110">
+					<li className="grid place-items-center hover:scale-110 transition-all">
 						<a href="https://github.com/zStevenn" target="_blank">
-							<BsGithub className="inline mr-2" />
+							<BsGithub className="inline text-slate-50 text-2xl" />
 						</a>
 					</li>
-					<li className="rounded p-4 hover:scale-110">
+					<li className="grid place-items-center hover:scale-110 transition-all">
 						<a href="https://github.com/zStevenn" target="_blank">
-							<BsGithub className="inline mr-2" />
+							<BsGithub className="inline text-slate-50 text-2xl" />
 						</a>
 					</li>
-					<li className="rounded p-4 hover:scale-110">
+					<li className="grid place-items-center hover:scale-110 transition-all">
 						<a href="https://github.com/zStevenn" target="_blank">
-							<BsGithub className="inline mr-2" />
+							<BsGithub className="inline text-slate-50 text-2xl" />
 						</a>
 					</li>
 				</ul>
 			</div>
-			<div className="text-slate-50 text-2xl text-center">Of</div>
-
+			<div className="text-slate-50 text-2xl text-center py-4 md:hidden">Of</div>
 			<form className="bg-neutral-50 p-6 rounded">
 				<h3 className="text-neutral-900 text-lg font-semibold text-center">
 					Stuur een bericht
