@@ -43,6 +43,7 @@ const Navbar = () => {
 								smooth={true}
 								offset={-100}
 								duration={500}
+								className="cursor-pointer"
 							>
 								{name}
 							</Link>
@@ -56,7 +57,7 @@ const Navbar = () => {
 					smooth={true}
 					offset={-100}
 					duration={500}
-					className="hidden sm:block px-3 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 rounded text-slate-50 text-lg"
+					className="hidden cursor-pointer sm:block px-3 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 rounded text-slate-50 text-lg"
 				>
 					Neem contact
 				</Link>
@@ -80,6 +81,7 @@ const Navbar = () => {
 								offset={-100}
 								duration={500}
 								onClick={toggleNav}
+								className="cursor-pointer"
 							>
 								{name}
 							</Link>
