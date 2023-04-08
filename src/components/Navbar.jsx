@@ -8,11 +8,9 @@ const Navbar = () => {
 	// Array of nav items with id and name.
 	const navElements = [
 		{ id: "hero", name: "Home" },
-		{ id: "vaardigheden", name: "Vaardigheden" },
-		{ id: "projecten", name: "Projecten" },
-		{ id: "services", name: "Services" },
 		{ id: "overmij", name: "Over Mij" },
 		{ id: "contact", name: "Contact" },
+		{ id: "projecten", name: "Projecten" },
 	]
 
 	// Toggles Navigation based on click
