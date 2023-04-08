@@ -23,7 +23,7 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between items-center px-8 py-3 z-50 bg-neutral-800 fixed top-0 w-full`}
+				className={`flex justify-between items-center px-8 py-3 mb-2 shadow shadow-neutral-800 z-50 bg-neutral-800 fixed top-0 w-full`}
 			>
 				{/* Hamburger Icon */}
 				<MdMenu
