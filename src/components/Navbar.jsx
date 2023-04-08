@@ -27,13 +27,13 @@ const Navbar = () => {
 			>
 				{/* Hamburger Icon */}
 				<MdMenu
-					className="text-3xl lg:hidden text-neutral-100"
+					className="text-3xl md:hidden text-neutral-100"
 					onClick={toggleNav}
 				/>
 				{/* Webpage Title */}
 				<h1 className="text-neutral-100 text-xl">Steven Li</h1>
 				{/* Navlist */}
-				<ul className="hidden lg:flex gap-8 text-neutral-100 text-lg">
+				<ul className="hidden md:flex gap-8 text-neutral-100 text-lg">
 					{navElements.map(({ id, name }) => (
 						<li key={id}>
 							<Link
@@ -63,7 +63,7 @@ const Navbar = () => {
 				</Link>
 			</nav>
 			<div
-				className={`lg:hidden text-neutral-100 px-8 py-3 fixed w-screen h-screen bg-neutral-900 z-50 shadow-lg transition-all duration-500 ${
+				className={`md:hidden text-neutral-100 px-8 py-3 fixed w-screen h-screen bg-neutral-900 z-50 shadow-lg transition-all duration-500 ${
 					showNav ? "-translate-x-full" : ""
 				}  `}
 			>
