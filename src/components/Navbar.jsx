@@ -3,7 +3,7 @@ import { MdMenu, MdClose } from "react-icons/md"
 import { Link } from "react-scroll"
 
 const Navbar = () => {
-	const [showNav, setShowNav] = useState(false)
+	const [showNav, setShowNav] = useState(true)
 
 	// Array of nav items with id and name.
 	const navElements = [
