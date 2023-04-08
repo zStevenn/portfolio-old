@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { MdMenu, MdClose } from "react-icons/md"
-import { Link, animateScroll as scroll } from "react-scroll"
+import { Link } from "react-scroll"
 
 const Navbar = () => {
 	const [showNav, setShowNav] = useState(false)
@@ -23,17 +23,17 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between items-center px-8 py-3 mb-2 shadow shadow-neutral-800 z-50 bg-neutral-800 fixed top-0 w-full`}
+				className={`flex justify-between items-center px-8 py-3 mb-2 shadow shadow-neutral-900 z-50 bg-neutral-900 fixed top-0 w-full`}
 			>
 				{/* Hamburger Icon */}
 				<MdMenu
-					className="text-3xl lg:hidden text-slate-50"
+					className="text-3xl lg:hidden text-neutral-100"
 					onClick={toggleNav}
 				/>
 				{/* Webpage Title */}
-				<h1 className="text-slate-50 text-xl">Steven Li</h1>
+				<h1 className="text-neutral-100 text-xl">Steven Li</h1>
 				{/* Navlist */}
-				<ul className="hidden lg:flex gap-8 text-slate-50 text-lg">
+				<ul className="hidden lg:flex gap-8 text-neutral-100 text-lg">
 					{navElements.map(({ id, name }) => (
 						<li key={id}>
 							<Link
@@ -41,7 +41,7 @@ const Navbar = () => {
 								to={id}
 								spy={true}
 								smooth={true}
-								offset={-100}
+								offset={-55}
 								duration={500}
 								className="cursor-pointer"
 							>
@@ -55,22 +55,22 @@ const Navbar = () => {
 					to={"contact"}
 					spy={true}
 					smooth={true}
-					offset={-100}
+					offset={-55}
 					duration={500}
-					className="hidden cursor-pointer sm:block px-3 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 rounded text-slate-50 text-lg"
+					className="hidden cursor-pointer sm:block px-3 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 rounded text-neutral-100 text-lg"
 				>
 					Neem contact
 				</Link>
 			</nav>
 			<div
-				className={`lg:hidden text-slate-50 px-8 py-3 fixed w-screen h-screen bg-neutral-800 z-50 shadow-lg transition-all duration-500 ${
+				className={`lg:hidden text-neutral-100 px-8 py-3 fixed w-screen h-screen bg-neutral-900 z-50 shadow-lg transition-all duration-500 ${
 					showNav ? "-translate-x-full" : ""
 				}  `}
 			>
 				<div className="flex justify-between">
 					<MdClose className="text-3xl mt-2" onClick={toggleNav} />
 				</div>
-				<ul className="grid gap-4 my-8 text-xl">
+				<ul className="grid gap-4 my-8 text-xl text-neutral-100">
 					{navElements.map(({ id, name }) => (
 						<li key={id}>
 							<Link
@@ -78,7 +78,7 @@ const Navbar = () => {
 								to={id}
 								spy={true}
 								smooth={true}
-								offset={-100}
+								offset={-55}
 								duration={500}
 								onClick={toggleNav}
 								className="cursor-pointer"

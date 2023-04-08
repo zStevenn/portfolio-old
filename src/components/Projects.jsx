@@ -3,7 +3,7 @@ import Project2 from "../assets/static/stevens-todo-app.png"
 
 function Projects() {
 	return (
-		<div className="px-8 py-20 bg-neutral-50 grid gap-4" id="projecten">
+		<div className="px-8 py-20 bg-neutral-100 grid gap-4 min-h-screen" id="projecten">
 			<h1 className="text-neutral-900 text-2xl font-semibold"># Projecten</h1>
 			<div className="grid grid-cols-1 md:grid-cols-2 place-content-center gap-8">
 				<div>
