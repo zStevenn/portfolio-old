@@ -3,7 +3,7 @@ import { MdMenu, MdClose } from "react-icons/md"
 import { Link, animateScroll as scroll } from "react-scroll"
 
 const Navbar = () => {
-	const [showNav, setShowNav] = useState()
+	const [showNav, setShowNav] = useState(false)
 
 	// Array of nav items with id and name.
 	const navElements = [
@@ -28,9 +28,10 @@ const Navbar = () => {
 				className={`flex justify-between lg:justify-center lg:gap-20 items-center px-8 py-4 z-50 bg-neutral-800 fixed top-0 w-full`}
 			>
 				{/* Hamburger Icon */}
-				<span className="lg:hidden text-slate-50 text-xl" onClick={toggleNav}>
-					<MdMenu className="text-3xl" />
-				</span>
+				<MdMenu
+					className="text-3xl lg:hidden text-slate-50"
+					onClick={toggleNav}
+				/>
 				{/* Webpage Title */}
 				<h1 className="text-slate-50 text-xl">Steven Li</h1>
 				{/* Navlist */}
@@ -51,43 +52,41 @@ const Navbar = () => {
 					))}
 				</ul>
 				{/* CTA Button - Contact Me */}
-				<a
-					href="#contactform"
+				<Link
+					to={"contact"}
+					spy={true}
+					smooth={true}
+					offset={-100}
+					duration={500}
 					className="hidden sm:block px-1 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 text-slate-50 text-lg"
 				>
 					Neem contact
-				</a>
+				</Link>
 			</nav>
-			{showNav && (
-				<>
-					<ul
-						className={`text-slate-50 px-8 py-4 fixed right-0 left-0 bg-neutral-800 border-bottom z-50 shadow-lg`}
-					>
-						<div className="flex justify-between py-4">
-							<MdClose className="text-3xl" onClick={toggleNav} />
-						</div>
-						{navElements.map(({ id, name }) => (
-							<li className="my-2" key={id}>
-								<Link
-									activeClass="active"
-									to={id}
-									spy={true}
-									smooth={true}
-									offset={-100}
-									duration={500}
-									onClick={toggleNav}
-								>
-									{name}
-								</Link>
-							</li>
-						))}
-					</ul>
-					<div
-						onClick={toggleNav}
-						className="fixed z-10 inset-0 opacity-90 bg-neutral-900"
-					/>
-				</>
-			)}
+			<ul
+				className={`text-slate-50 px-8 py-4 fixed w-1/2 h-screen bg-neutral-800 z-50 shadow-lg transition-all duration-500 ${
+					showNav ? "-translate-x-full" : ""
+				}  `}
+			>
+				<div className="flex justify-between">
+					<MdClose className="text-3xl" onClick={toggleNav} />
+				</div>
+				{navElements.map(({ id, name }) => (
+					<li className="my-4" key={id}>
+						<Link
+							activeClass="active"
+							to={id}
+							spy={true}
+							smooth={true}
+							offset={-100}
+							duration={500}
+							onClick={toggleNav}
+						>
+							{name}
+						</Link>
+					</li>
+				))}
+			</ul>
 			{/* Einde Navbar */}
 		</>
 	)
