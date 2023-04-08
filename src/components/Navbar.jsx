@@ -25,7 +25,7 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between lg:justify-center lg:gap-20 items-center px-8 py-4 z-50 bg-neutral-800 fixed top-0 w-full`}
+				className={`flex justify-between items-center px-8 py-3 z-50 bg-neutral-800 fixed top-0 w-full`}
 			>
 				{/* Hamburger Icon */}
 				<MdMenu
@@ -63,30 +63,32 @@ const Navbar = () => {
 					Neem contact
 				</Link>
 			</nav>
-			<ul
-				className={`text-slate-50 px-8 py-4 fixed w-1/2 h-screen bg-neutral-800 z-50 shadow-lg transition-all duration-500 ${
+			<div
+				className={`lg:hidden text-slate-50 px-8 py-3 fixed w-screen h-screen bg-neutral-800 z-50 shadow-lg transition-all duration-500 ${
 					showNav ? "-translate-x-full" : ""
 				}  `}
 			>
 				<div className="flex justify-between">
-					<MdClose className="text-3xl" onClick={toggleNav} />
+					<MdClose className="text-3xl mt-2" onClick={toggleNav} />
 				</div>
-				{navElements.map(({ id, name }) => (
-					<li className="my-4" key={id}>
-						<Link
-							activeClass="active"
-							to={id}
-							spy={true}
-							smooth={true}
-							offset={-100}
-							duration={500}
-							onClick={toggleNav}
-						>
-							{name}
-						</Link>
-					</li>
-				))}
-			</ul>
+				<ul className="grid gap-4 my-8 text-xl">
+					{navElements.map(({ id, name }) => (
+						<li key={id}>
+							<Link
+								activeClass="active"
+								to={id}
+								spy={true}
+								smooth={true}
+								offset={-100}
+								duration={500}
+								onClick={toggleNav}
+							>
+								{name}
+							</Link>
+						</li>
+					))}
+				</ul>
+			</div>
 			{/* Einde Navbar */}
 		</>
 	)
