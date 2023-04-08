@@ -1,4 +1,6 @@
 import HeroImage from "../assets/static/profile.png"
+import cv from "../assets/static/Steven_Li_CV_NL.pdf"
+import { Link } from "react-scroll"
 
 function Hero() {
 	return (
@@ -16,18 +18,22 @@ function Hero() {
 				</h1>
 				<div className="flex gap-4">
 					<a
-						download={"Steven Li CV"}
-						href="/src/assets/static/Steven_Li_CV_NL.pdf"
+						download="Steven_Li_CV_NL.pdf"
+						href={cv}
 						className="px-3 py-2 rounded bg-red-500 border-b-2 border-r-2 border-red-900 text-slate-50 text-lg"
 					>
 						Download CV
 					</a>
-					<a
-						href="#projecten"
-						className="px-3 py-2 rounded bg-gray-500 border-b-2 border-r-2 border-gray-900 text-slate-50 text-lg"
-					>
-						Projecten
-					</a>
+					<Link
+					to={"projecten"}
+					spy={true}
+					smooth={true}
+					offset={-100}
+					duration={500}
+					className="px-3 py-2 cursor-pointer rounded bg-gray-500 border-b-2 border-r-2 border-gray-900 text-slate-50 text-lg"
+				>
+					Projecten
+				</Link>
 				</div>
 			</div>
 			<img src={HeroImage} className="grayscale max-w-xs" alt="Steven Li" />
