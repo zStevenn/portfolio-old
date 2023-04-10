@@ -2,8 +2,8 @@ import { SiReact, SiTailwindcss, SiFigma, SiNetlify } from "react-icons/si"
 
 function Aboutme() {
 	return (
-		<div className="bg-neutral-100">
-			<div className="px-8 py-20 my-2 grid gap-4 min-h-screen container mx-auto" id="overmij">
+		<div className="bg-neutral-100 grid place-items-center">
+			<div className="px-8 py-20 my-2 flex flex-col justify-center gap-4 md:gap-8 min-h-screen container mx-auto" id="overmij">
 				<h1 className="text-neutral-900 text-2xl font-semibold"># Over mij</h1>
 				<ul className="list-disc ml-4">
 					<li>
