@@ -64,7 +64,7 @@ const Navbar = () => {
 			</nav>
 			<div
 				className={`md:hidden text-neutral-100 px-8 py-3 fixed w-screen h-screen bg-neutral-900 z-50 shadow-lg transition-all duration-500 ${
-					showNav ? "-translate-x-full" : ""
+					showNav ? "-translate-x-full" : "translate-x-0"
 				}  `}
 			>
 				<div className="flex justify-between">
