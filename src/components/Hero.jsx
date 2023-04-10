@@ -1,12 +1,37 @@
 import HeroImage from "../assets/static/profile.png"
 import cv from "../assets/static/Steven_Li_CV_NL.pdf"
 import { Link } from "react-scroll"
+import { useRef, useEffect } from "react"
 
 function Hero() {
+	const heroRef = useRef(null)
+
+	useEffect(() => {
+		const hero = heroRef.current
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add("opacity-100", "translate-x-0")
+						entry.target.classList.remove("opacity-0", "-translate-x-full")
+					}
+				})
+			},
+			{ threshold: [0.0] }
+		)
+
+		observer.observe(hero)
+
+		return () => {
+			observer.unobserve(hero)
+		}
+	}, [])
+
 	return (
 		<div className="bg-neutral-900">
 			<div
-				className="grid grid-cols-1 snap-center gap-4 py-20 sm:grid-cols-2 px-8 sm:place-items-center min-h-screen container mx-auto"
+				ref={heroRef}
+				className="grid grid-cols-1 gap-4 py-20 sm:grid-cols-2 px-8 sm:place-items-center min-h-screen container mx-auto -translate-x-full opacity-0 transition-all duration-1000"
 				id="hero"
 			>
 				<div className="text-neutral-100 grid gap-1 sm:gap-2">
