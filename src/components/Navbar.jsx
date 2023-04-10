@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { MdMenu, MdClose } from "react-icons/md"
 import { Link } from "react-scroll"
+import Logo from "../assets/static/logo.svg"
 
 const Navbar = () => {
 	const [showNav, setShowNav] = useState(true)
@@ -31,7 +32,14 @@ const Navbar = () => {
 					onClick={toggleNav}
 				/>
 				{/* Webpage Title */}
-				<h1 className="text-neutral-100 text-xl">Steven Li</h1>
+				<h1 className="text-neutral-100 text-xl flex flex-nowrap gap-2 items-center">
+					<img
+						src={Logo}
+						alt="Logo"
+						className="h-5 w-5 bg-neutral-100"
+					/>
+					Steven Li
+				</h1>
 				{/* Navlist */}
 				<ul className="hidden md:flex gap-8 text-neutral-100 text-lg">
 					{navElements.map(({ id, name }) => (
