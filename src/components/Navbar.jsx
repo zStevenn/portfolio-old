@@ -29,9 +29,9 @@ const Navbar = () => {
 				{/* Hamburger Icon */}
 				<button onClick={toggleNav} alt="Menu" title="Menu">
 					{showNav ? (
-						<MdClose className="text-3xl md:hidden text-neutral-100" />
-					) : (
 						<MdMenu className="text-3xl md:hidden text-neutral-100" />
+					) : (
+						<MdClose className="text-3xl md:hidden text-neutral-100" />
 					)}
 				</button>
 				{/* Webpage Title */}
