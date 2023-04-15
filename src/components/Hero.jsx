@@ -16,7 +16,7 @@ function Hero() {
 	return (
 		<div className="container mx-auto max-w-screen-lg">
 			<div
-				className="flex flex-col sm:flex-row justify-center gap-4 p-4 mt-10"
+				className="flex flex-col sm:flex-row justify-center gap-4 px-2 py-4 sm:px-4 mt-10"
 				id="hero"
 			>
 				<div ref={textRef} className="text-neutral-100">
@@ -58,7 +58,7 @@ function Hero() {
 				/>
 			</div>
 			{/* Bullet points of my achievements */}
-			<div className="flex flex-col md:grid md:grid-cols-3 gap-4 p-4 text-neutral-100 mb-10">
+			<div className="flex flex-col md:grid md:grid-cols-3 gap-4 px-2 py-4 sm:px-4 text-neutral-100 mb-10">
 				<div
 					ref={achievementOneRef}
 					className="flex md:flex-col md:justify-center md:text-center gap-4 items-center p-4 bg-gray-500 rounded-md"
