@@ -1,25 +1,66 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect } from "react"
 
-export default function useFadeIn() {
-  const ref = useRef(null);
+// Hook to fade in elements on scroll
+export function useFadeIn(direction = "left", duration = 500, threshold = 0.5) {
+	const ref = useRef(null)
 
-  useEffect(() => {
-    const fadeRef = ref.current;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('opacity-100', `translate-x-0`);
-            entry.target.classList.remove('opacity-0', `-translate-x-32`);
-          }
-        });
-      },
-      { threshold: [0.5] }
-    );
-    observer.observe(fadeRef);
+	useEffect(() => {
+		const fadeRef = ref.current
 
-    return () => observer.unobserve(fadeRef);
-  }, [ref]);
+		if (!fadeRef) return
 
-  return ref;
+		// Add initial class
+		fadeRef.classList.add(`opacity-0`)
+		fadeRef.classList.add(`duration-${duration}`)
+		fadeRef.classList.add(`transition-all`)
+
+		if (direction === "left") {
+			fadeRef.classList.add(`-translate-x-full`)
+		}
+
+		if (direction === "right") {
+			fadeRef.classList.add(`translate-x-full`)
+		}
+
+		if (direction === "top") {
+			fadeRef.classList.add(`-translate-y-full`)
+		}
+
+		if (direction === "bottom") {
+			fadeRef.classList.add(`translate-y-full`)
+		}
+
+		const observer = new IntersectionObserver(
+			entries => {
+				entries.forEach(entry => {
+					setTimeout(() => {
+						if (entry.isIntersecting) {
+							if (direction === "left") {
+								entry.target.classList.add("opacity-100", `translate-x-0`)
+								entry.target.classList.remove("opacity-0", `-translate-x-full`)
+							}
+							if (direction === "right") {
+								entry.target.classList.add("opacity-100", `-translate-x-0`)
+								entry.target.classList.remove("opacity-0", `translate-x-full`)
+							}
+							if (direction === "top") {
+								entry.target.classList.add("opacity-100", `translate-y-0`)
+								entry.target.classList.remove("opacity-0", `-translate-y-full`)
+							}
+							if (direction === "bottom") {
+								entry.target.classList.add("opacity-100", `-translate-y-0`)
+								entry.target.classList.remove("opacity-0", `translate-y-full`)
+							}
+						}
+					}, duration)
+				})
+			},
+			{ threshold: [threshold] }
+		)
+		observer.observe(fadeRef)
+
+		return () => observer.unobserve(fadeRef)
+	}, [ref])
+
+	return ref
 }
