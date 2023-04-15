@@ -61,7 +61,7 @@ function Aboutme() {
 					<p>Gewerkt met libraries en frameworks zoals:</p>
 				</div>
 
-				<div className="flex gap-4" ref={iconRef}>
+				<div className="flex flex-col md:flex-row gap-4" ref={iconRef}>
 					<div className="grid place-items-center rounded bg-neutral-900 border-b-2 border-r-2 border-neutral-900 px-3 py-6 shadow-neutral-900 shadow-md">
 						<h3 className="text-neutral-100 pb-4">Figma</h3>
 						<SiFigma className="text-5xl sm:text-6xl md:text-8xl text-slate-50" />
