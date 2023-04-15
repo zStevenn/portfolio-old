@@ -2,20 +2,21 @@ import HeroImage from "../assets/static/profile.png"
 import cv from "../assets/static/Steven_Li_CV_NL.pdf"
 import { Link } from "react-scroll"
 import { useFadeIn } from "../hooks/useFadeIn"
-import { IoBookSharp } from "react-icons/io5"
 import { BsCodeSlash } from "react-icons/bs"
+import { FaGraduationCap } from "react-icons/fa"
+import { MdWork } from "react-icons/md"
 
 function Hero() {
 	const textRef = useFadeIn("left", 500, 0)
 	const imageRef = useFadeIn("right", 500, 0)
 	const achievementOneRef = useFadeIn("bottom", 500, 1)
-	const achievementTwoRef = useFadeIn("bottom", 500, 1)
-	const achievementThreeRef = useFadeIn("bottom", 500, 1)
+	const achievementTwoRef = useFadeIn("bottom", 500, 0.5)
+	const achievementThreeRef = useFadeIn("bottom", 500, 0)
 
 	return (
 		<>
 			<div
-				className="bg-neutral-900 flex flex-col justify-center gap-4 p-4"
+				className="bg-neutral-900 flex flex-col justify-center gap-4 p-4 mt-10"
 				id="hero"
 			>
 				<div ref={textRef} className="text-neutral-100">
@@ -46,30 +47,37 @@ function Hero() {
 						</Link>
 					</div>
 				</div>
-				<img ref={imageRef} src={HeroImage} alt="Steven Li" />
+				<img
+					ref={imageRef}
+					src={HeroImage}
+					alt="Steven Li"
+					className="max-w-sm"
+				/>
 			</div>
 			{/* Bullet points of my achievements */}
-			<div className="p-4 text-neutral-100">
+			<div className="flex flex-col gap-4 p-4 text-neutral-100 mb-10">
 				<div
 					ref={achievementOneRef}
 					className="flex gap-4 items-center p-4 bg-gray-500 rounded-md"
 				>
 					<BsCodeSlash className="text-3xl" />
-					<p className="text-lg">Gewerkt aan 3 projecten</p>
+					<p className="text-base">Gewerkt aan 3+ projecten</p>
 				</div>
 				<div
 					ref={achievementTwoRef}
 					className="flex gap-4 items-center p-4 bg-gray-500 rounded-md"
 				>
-					<IoBookSharp className="text-3xl" />
-					<p className="text-lg">xx</p>
+					<FaGraduationCap className="text-3xl" />
+					<p className="text-base">Studie softwaredeveloper afgerond</p>
 				</div>
 				<div
 					ref={achievementThreeRef}
 					className="flex gap-4 items-center p-4 bg-gray-500 rounded-md"
 				>
-					<IoBookSharp className="text-3xl" />
-					<p className="text-lg">xx</p>
+					<MdWork className="text-3xl" />
+					<p className="text-base">
+						Stagiair softwaredeveloper @ Sellvation Marketing B.V.
+					</p>
 				</div>
 			</div>
 		</>
