@@ -24,20 +24,20 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between items-center px-8 py-3 mb-2 shadow shadow-neutral-900 z-50 bg-neutral-900 fixed top-0 w-full`}
+				className={`flex justify-between items-center px-2 py-4 sm:px-4 mb-2 shadow shadow-neutral-900 z-50 bg-neutral-900`}
 			>
 				{/* Hamburger Icon */}
-				<MdMenu
-					className="text-3xl md:hidden text-neutral-100"
+				<button
 					onClick={toggleNav}
-				/>
+					alt="Menu"
+					title="Menu"
+					className="md:hidden text-3xl text-neutral-100"
+				>
+					{showNav ? <MdMenu /> : <MdClose />}
+				</button>
 				{/* Webpage Title */}
 				<h1 className="text-neutral-100 text-xl flex flex-nowrap gap-2 items-center">
-					<img
-						src={Logo}
-						alt="Logo"
-						className="h-5 w-5 bg-neutral-100"
-					/>
+					<img src={Logo} alt="Logo" className="h-5 w-5 bg-neutral-100" />
 					Steven Li
 				</h1>
 				{/* Navlist */}
@@ -71,31 +71,38 @@ const Navbar = () => {
 				</Link>
 			</nav>
 			<div
-				className={`md:hidden text-neutral-100 px-8 py-3 fixed w-screen h-screen bg-neutral-900 z-50 shadow-lg transition-all duration-500 ${
+				className={`md:hidden text-neutral-100 fixed top-0 left-0 w-screen h-screen bg-neutral-900/40 z-50 shadow-lg transition-all duration-500 ${
 					showNav ? "-translate-x-full" : "translate-x-0"
 				}  `}
 			>
-				<div className="flex justify-between">
-					<MdClose className="text-3xl mt-2" onClick={toggleNav} />
+				<div className="px-2 py-4 sm:px-4 w-4/5 h-screen bg-neutral-900">
+					{/* Webpage Title */}
+					<h1
+						className="text-neutral-100 text-xl flex flex-nowrap gap-2 items-center cursor-pointer"
+						onClick={toggleNav}
+					>
+						<img src={Logo} alt="Logo" className="h-5 w-5 bg-neutral-100" />
+						Steven Li
+					</h1>
+					<ul className="grid gap-4 my-8 text-xl text-neutral-100">
+						{navElements.map(({ id, name }) => (
+							<li key={id}>
+								<Link
+									activeClass="active"
+									to={id}
+									spy={true}
+									smooth={true}
+									offset={-55}
+									duration={500}
+									onClick={toggleNav}
+									className="cursor-pointer"
+								>
+									{name}
+								</Link>
+							</li>
+						))}
+					</ul>
 				</div>
-				<ul className="grid gap-4 my-8 text-xl text-neutral-100">
-					{navElements.map(({ id, name }) => (
-						<li key={id}>
-							<Link
-								activeClass="active"
-								to={id}
-								spy={true}
-								smooth={true}
-								offset={-55}
-								duration={500}
-								onClick={toggleNav}
-								className="cursor-pointer"
-							>
-								{name}
-							</Link>
-						</li>
-					))}
-				</ul>
 			</div>
 			{/* Einde Navbar */}
 		</>
