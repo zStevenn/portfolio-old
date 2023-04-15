@@ -24,15 +24,16 @@ const Navbar = () => {
 			{/* Navbar */}
 			<nav
 				id="navbar"
-				className={`flex justify-between items-center px-4 py-4 mb-2 shadow shadow-neutral-900 z-50 bg-neutral-900`}
+				className={`flex justify-between items-center px-2 py-4 sm:px-4 mb-2 shadow shadow-neutral-900 z-50 bg-neutral-900`}
 			>
 				{/* Hamburger Icon */}
-				<button onClick={toggleNav} alt="Menu" title="Menu">
-					{showNav ? (
-						<MdMenu className="text-3xl md:hidden text-neutral-100" />
-					) : (
-						<MdClose className="text-3xl md:hidden text-neutral-100" />
-					)}
+				<button
+					onClick={toggleNav}
+					alt="Menu"
+					title="Menu"
+					className="md:hidden text-3xl text-neutral-100"
+				>
+					{showNav ? <MdMenu /> : <MdClose />}
 				</button>
 				{/* Webpage Title */}
 				<h1 className="text-neutral-100 text-xl flex flex-nowrap gap-2 items-center">
@@ -70,11 +71,11 @@ const Navbar = () => {
 				</Link>
 			</nav>
 			<div
-				className={`md:hidden text-neutral-100  fixed top-0 left-0 w-screen h-screen bg-neutral-900/40 z-50 shadow-lg transition-all duration-500 ${
+				className={`md:hidden text-neutral-100 fixed top-0 left-0 w-screen h-screen bg-neutral-900/40 z-50 shadow-lg transition-all duration-500 ${
 					showNav ? "-translate-x-full" : "translate-x-0"
 				}  `}
 			>
-				<div className="p-4 w-4/5 h-screen bg-neutral-900">
+				<div className="px-2 py-4 sm:px-4 w-4/5 h-screen bg-neutral-900">
 					{/* Webpage Title */}
 					<h1
 						className="text-neutral-100 text-xl flex flex-nowrap gap-2 items-center cursor-pointer"

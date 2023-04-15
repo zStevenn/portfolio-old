@@ -14,20 +14,23 @@ function Hero() {
 	const achievementThreeRef = useFadeIn("bottom", 500, 0)
 
 	return (
-		<>
+		<div className="container mx-auto max-w-screen-lg">
 			<div
-				className="bg-neutral-900 flex flex-col justify-center gap-4 p-4 mt-10"
+				className="flex flex-col sm:flex-row justify-center gap-4 p-4 mt-10"
 				id="hero"
 			>
 				<div ref={textRef} className="text-neutral-100">
-					<h1 className="text-lg md:text-3xl xl:text-5xl">Hey!</h1>
-					<h2 className="text-2xl md:text-4xl xl:text-6xl tracking-wide">
+					<div className="relative">
+						<div className="absolute top-1/2 left-0 w-14 h-0.5 bg-neutral-100 rounded-full"></div>
+						<h1 className="text-lg md:text-3xl xl:text-4xl ml-16">Hey!</h1>
+					</div>
+					<h2 className="text-2xl md:text-4xl xl:text-5xl tracking-wide">
 						Ik ben <strong className="text-red-800">Steven Li,</strong>
 					</h2>
-					<h2 className="text-2xl md:text-4xl xl:text-6xl tracking-wide mb-2">
+					<h2 className="text-2xl md:text-4xl xl:text-5xl tracking-wide mb-2">
 						Softwaredeveloper.
 					</h2>
-					<div className="flex flex-col gap-4">
+					<div className="flex flex-col md:flex-row gap-4">
 						<a
 							download="Steven_Li_CV_NL.pdf"
 							href={cv}
@@ -51,28 +54,28 @@ function Hero() {
 					ref={imageRef}
 					src={HeroImage}
 					alt="Steven Li"
-					className="max-w-sm"
+					className="max-w-xs"
 				/>
 			</div>
 			{/* Bullet points of my achievements */}
-			<div className="flex flex-col gap-4 p-4 text-neutral-100 mb-10">
+			<div className="flex flex-col md:grid md:grid-cols-3 gap-4 p-4 text-neutral-100 mb-10">
 				<div
 					ref={achievementOneRef}
-					className="flex gap-4 items-center p-4 bg-gray-500 rounded-md"
+					className="flex md:flex-col md:justify-center md:text-center gap-4 items-center p-4 bg-gray-500 rounded-md"
 				>
 					<BsCodeSlash className="text-3xl" />
 					<p className="text-base">Gewerkt aan 3+ projecten</p>
 				</div>
 				<div
 					ref={achievementTwoRef}
-					className="flex gap-4 items-center p-4 bg-gray-500 rounded-md"
+					className="flex md:flex-col md:justify-center md:text-center gap-4 items-center p-4 bg-gray-500 rounded-md"
 				>
 					<FaGraduationCap className="text-3xl" />
 					<p className="text-base">Studie softwaredeveloper afgerond</p>
 				</div>
 				<div
 					ref={achievementThreeRef}
-					className="flex gap-4 items-center p-4 bg-gray-500 rounded-md"
+					className="flex md:flex-col md:justify-center md:text-center gap-4 items-center p-4 bg-gray-500 rounded-md"
 				>
 					<MdWork className="text-3xl" />
 					<p className="text-base">
@@ -80,7 +83,7 @@ function Hero() {
 					</p>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 
