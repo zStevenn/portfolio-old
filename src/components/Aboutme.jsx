@@ -1,39 +1,74 @@
-import { SiReact, SiTailwindcss, SiFigma, SiNetlify } from "react-icons/si"
+import { SiReact, SiTailwindcss, SiFigma, SiVite } from "react-icons/si"
+import { useFadeIn } from "../hooks/useFadeIn"
 
 function Aboutme() {
-	return (
-		<div className="bg-neutral-100 grid place-items-center">
-			<div className="px-8 py-20 my-2 flex flex-col justify-center gap-4 md:gap-8 min-h-screen container mx-auto" id="overmij">
-				<h1 className="text-neutral-900 text-2xl font-semibold"># Over mij</h1>
-				<ul className="list-disc ml-4">
-					<li>
-						Momenteel bezig met mijn opleiding Softwaredeveloper aan MBO Utrecht
-						waar ik mijn diploma verwacht in Juni 2023.
-					</li>
-					<li>
-						Mijn doel is om innovatieve en effectieve oplossingen te creëren.
-					</li>
-					<li>
-						Ik ben een nauwkeurige probleemoplosser en effectieve teamspeler.
-					</li>
-					<li>
-						Altijd op zoek naar nieuwe manieren om mijn vaardigheden te
-						verbeteren en kennis uit te breiden.
-					</li>
-					<li>Ervaring in HTML, CSS, JavaScript, PHP en UI/UX design.</li>
-				</ul>
-				<p className="text-neutral-900">
-					Gewerkt met programma's, libraries en frameworks zoals:
-				</p>
+	const titleRef = useFadeIn("top", 500, 1)
+	const paragraphRef = useFadeIn("left", 500, 0)
+	const iconRef = useFadeIn("right", 500, 0)
 
-				<div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8">
+	return (
+		<div className="bg-neutral-100 ">
+			<div
+				className="container mx-auto max-w-screen-lg px-2 py-10 sm:px-4 text-neutral-900"
+				id="overmij"
+			>
+				<h1
+					ref={titleRef}
+					className="text-neutral-900 text-2xl font-semibold pb-10"
+				>
+					# Over mij
+				</h1>
+				<div className="grid gap-4 pb-4 sm:pb-8" ref={paragraphRef}>
+					<p>
+						Hallo, en welkom op mijn webportfolio! Ik ben{" "}
+						<span className="font-semibold">Steven</span>, een gepassioneerde
+						junior developer die in{" "}
+						<span className="underline font-bold">juli 2023</span> zijn diploma
+						Software developer mag ophalen!
+					</p>
+					<p>
+						In de afgelopen 3 jaar heb ik veel ervaring opgedaan tijdens mijn
+						studie en stage. Naast alle technische kennis die ik heb opgedaan
+						zoals o.a.:
+					</p>
+					<ul className="list-disc ml-4">
+						<li className="mb-1">HTML, CSS, JavaScript</li>
+						<li className="mb-1">React & Vue</li>
+						<li className="mb-1">Component based coderen</li>
+						<li className="mb-1">TailwindCSS & BEM Methodology</li>
+						<li className="mb-1">PHP (OOP) en MySQL</li>
+						<li className="mb-1">UI Design</li>
+						<li className="mb-1">Mobile first & responsive</li>
+					</ul>
+					<p>
+						Heb ik ook veel ervaring opgedaan in het werken in teamverband in
+						SCRUM / Agile werkmethoden en communiceren met klanten. Tot op heden
+						ben ik bezig met het maken van meerdere persoonlijke applicaties om
+						mijn front-end skills te verbeteren en vaardiger te worden met de
+						meest gebruikte frameworks en libraries.
+					</p>
+					<p>
+						In mijn vrije tijd ben ik vaak fanatiek aan het fitnessen,
+						voornamelijk gewichtstraining, waarbij ik ook een voedingsschema en
+						supplementen gebruik om mijn doelen te bereiken.
+					</p>
+					<p>
+						Recent ben ik ook steeds meer geïnteresseerd geraakt in reizen en
+						het ontdekken van nieuwe culturen. Deze interesse is begonnen na
+						mijn recente bezoek aan mijn familie in China. Ik ben van plan om in
+						de toekomst veel meer te gaan reizen en nieuwe plekken te ontdekken.
+					</p>
+					<p>Gewerkt met libraries en frameworks zoals:</p>
+				</div>
+
+				<div className="flex gap-4" ref={iconRef}>
 					<div className="grid place-items-center rounded bg-neutral-900 border-b-2 border-r-2 border-neutral-900 px-3 py-6 shadow-neutral-900 shadow-md">
 						<h3 className="text-neutral-100 pb-4">Figma</h3>
 						<SiFigma className="text-5xl sm:text-6xl md:text-8xl text-slate-50" />
 					</div>
 					<div className="grid place-items-center rounded bg-neutral-900 border-b-2 border-r-2 border-neutral-900 px-3 py-6 shadow-neutral-900 shadow-md">
-						<h3 className="text-neutral-100 pb-4">Netlify</h3>
-						<SiNetlify className="text-5xl sm:text-6xl md:text-8xl text-slate-50" />
+						<h3 className="text-neutral-100 pb-4">Vite</h3>
+						<SiVite className="text-5xl sm:text-6xl md:text-8xl text-slate-50" />
 					</div>
 					<div className="grid place-items-center rounded bg-neutral-900 border-b-2 border-r-2 border-neutral-900 px-3 py-6 shadow-neutral-900 shadow-md">
 						<h3 className="text-neutral-100 pb-4">React</h3>
