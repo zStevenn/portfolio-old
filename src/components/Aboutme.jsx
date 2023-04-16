@@ -2,9 +2,9 @@ import { SiReact, SiTailwindcss, SiFigma, SiVite } from "react-icons/si"
 import { useFadeIn } from "../hooks/useFadeIn"
 
 function Aboutme() {
-	const titleRef = useFadeIn("top", 500, 1)
-	const paragraphRef = useFadeIn("left", 500, 0)
-	const iconRef = useFadeIn("right", 500, 0)
+	const titleRef = useFadeIn("top", 1000, 1)
+	const paragraphRef = useFadeIn("left", 1000, 0.1)
+	const iconRef = useFadeIn("right", 1000, 0.1)
 
 	return (
 		<div className="bg-neutral-100 ">
@@ -14,11 +14,11 @@ function Aboutme() {
 			>
 				<h1
 					ref={titleRef}
-					className="text-neutral-900 text-2xl font-semibold pb-10"
+					className="opacity-0 text-neutral-900 text-2xl font-semibold pb-10"
 				>
 					# Over mij
 				</h1>
-				<div className="grid gap-4 pb-4 sm:pb-8" ref={paragraphRef}>
+				<div ref={paragraphRef} className="opacity-0 grid gap-4 pb-4 sm:pb-8">
 					<p>
 						Hallo, en welkom op mijn webportfolio! Ik ben{" "}
 						<span className="font-semibold">Steven</span>, een gepassioneerde
@@ -32,13 +32,13 @@ function Aboutme() {
 						zoals o.a.:
 					</p>
 					<ul className="list-disc ml-4">
-						<li className="mb-1">HTML, CSS, JavaScript</li>
-						<li className="mb-1">React & Vue</li>
-						<li className="mb-1">Component based coderen</li>
-						<li className="mb-1">TailwindCSS & BEM Methodology</li>
-						<li className="mb-1">PHP (OOP) en MySQL</li>
-						<li className="mb-1">UI Design</li>
-						<li className="mb-1">Mobile first & responsive</li>
+						<li className="mb-4">HTML, CSS, JavaScript</li>
+						<li className="mb-4">React & Vue</li>
+						<li className="mb-4">Component based coderen</li>
+						<li className="mb-4">TailwindCSS & BEM Methodology</li>
+						<li className="mb-4">PHP (OOP) en MySQL</li>
+						<li className="mb-4">UI Design</li>
+						<li className="mb-4">Mobile first & responsive</li>
 					</ul>
 					<p>
 						Heb ik ook veel ervaring opgedaan in het werken in teamverband in
@@ -61,7 +61,10 @@ function Aboutme() {
 					<p>Gewerkt met libraries en frameworks zoals:</p>
 				</div>
 
-				<div className="flex flex-col md:flex-row gap-4" ref={iconRef}>
+				<div
+					className="opacity-0 flex flex-col flex-wrap md:flex-row gap-4"
+					ref={iconRef}
+				>
 					<div className="grid place-items-center rounded bg-neutral-900 border-b-2 border-r-2 border-neutral-900 px-3 py-6 shadow-neutral-900 shadow-md">
 						<h3 className="text-neutral-100 pb-4">Figma</h3>
 						<SiFigma className="text-5xl sm:text-6xl md:text-8xl text-slate-50" />

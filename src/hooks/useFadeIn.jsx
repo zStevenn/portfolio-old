@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react"
 
 // Hook to fade in elements on scroll
-export function useFadeIn(direction = "left", duration = 500, threshold = 0.5) {
+export function useFadeIn(direction = "left", delay = 500, threshold = 0.5) {
 	const ref = useRef(null)
 
 	useEffect(() => {
@@ -10,9 +10,7 @@ export function useFadeIn(direction = "left", duration = 500, threshold = 0.5) {
 		if (!fadeRef) return
 
 		// Add initial class
-		fadeRef.classList.add(`opacity-0`)
-		fadeRef.classList.add(`duration-${duration}`)
-		fadeRef.classList.add(`transition-all`)
+		fadeRef.classList.add(`transition`, `duration-1000`, `ease-in-out`)
 
 		if (direction === "left") {
 			fadeRef.classList.add(`-translate-x-full`)
@@ -52,7 +50,7 @@ export function useFadeIn(direction = "left", duration = 500, threshold = 0.5) {
 								entry.target.classList.remove("opacity-0", `translate-y-full`)
 							}
 						}
-					}, duration)
+					}, delay)
 				})
 			},
 			{ threshold: [threshold] }
