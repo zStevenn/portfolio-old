@@ -7,8 +7,8 @@ import { FaGraduationCap } from "react-icons/fa"
 import { MdWork } from "react-icons/md"
 
 function Hero() {
-	const textRef = useFadeIn("left", 500, 0)
-	const imageRef = useFadeIn("right", 500, 0)
+	const textRef = useFadeIn("left", 500, 1)
+	const imageRef = useFadeIn("right", 500, 1)
 	const achievementOneRef = useFadeIn("bottom", 1000, 1)
 	const achievementTwoRef = useFadeIn("bottom", 1000, 1)
 	const achievementThreeRef = useFadeIn("bottom", 1000, 1)
@@ -30,11 +30,11 @@ function Hero() {
 					<h2 className="text-2xl md:text-4xl xl:text-5xl tracking-wide mb-2">
 						Softwaredeveloper.
 					</h2>
-					<div className="flex flex-col md:flex-row gap-4">
+					<div>
 						<a
 							download="Steven_Li_CV_NL.pdf"
 							href={cv}
-							className="px-3 py-2 w-fit rounded bg-red-500 border-b-2 border-r-2 border-red-900 text-neutral-100 text-base"
+							className="block mb-4 px-3 py-2 w-fit rounded bg-red-500 border-b-2 border-r-2 border-red-700 text-neutral-100 md:text-lg"
 						>
 							Download CV
 						</a>
@@ -44,7 +44,7 @@ function Hero() {
 							smooth={true}
 							offset={-55}
 							duration={500}
-							className="px-3 py-2 w-fit cursor-pointer rounded bg-gray-500 border-b-2 border-r-2 border-gray-900 text-neutral-100 text-base"
+							className="px-3 py-2 w-fit cursor-pointer rounded bg-gray-500 border-b-2 border-r-2 border-gray-700 text-neutral-100 md:text-lg"
 						>
 							Over mij
 						</Link>
