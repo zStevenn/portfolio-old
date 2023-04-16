@@ -2,9 +2,9 @@ import { SiReact, SiTailwindcss, SiFigma, SiVite } from "react-icons/si"
 import { useFadeIn } from "../hooks/useFadeIn"
 
 function Aboutme() {
-	const titleRef = useFadeIn("top", 1000, 1)
-	const paragraphRef = useFadeIn("left", 1000, 0.1)
-	const iconRef = useFadeIn("right", 1000, 0.1)
+	const titleRef = useFadeIn("top", 500, 0)
+	const paragraphRef = useFadeIn("left", 1000, 0)
+	const iconRef = useFadeIn("right", 1000, 0)
 
 	return (
 		<div className="bg-neutral-100 ">
