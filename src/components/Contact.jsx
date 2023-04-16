@@ -85,9 +85,9 @@ function Contact() {
 				</div>
 			)}
 
-			<div className="bg-neutral-900 grid place-items-center">
+			<div className="bg-neutral-900">
 				<div
-					className="px-4 py-10 container mx-auto flex flex-col justify-center gap-4 md:gap-8"
+					className="px-2 sm:px-4 py-10 container mx-auto max-w-screen-lg flex flex-col justify-center gap-4"
 					id="contact"
 				>
 					<h1
@@ -97,7 +97,7 @@ function Contact() {
 						# Contact
 					</h1>
 					<div className="md:grid md:grid-cols-2 md:gap-8">
-						<div ref={paragraphRef} className="opacity-0 text-neutral-100">
+						<div ref={paragraphRef} className="opacity-0 text-neutral-100 flex flex-col justify-center">
 							<ul className="grid gap-1 tracking-wide mb-4">
 								<li>Steven Li</li>
 								<li>Driebergen-Rijsenburg</li>
