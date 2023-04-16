@@ -71,11 +71,11 @@ const Navbar = () => {
 				</Link>
 			</nav>
 			<div
-				className={`md:hidden text-neutral-100 fixed top-0 left-0 w-screen h-screen bg-neutral-900/40 z-50 shadow-lg transition-all duration-500 ${
-					showNav ? "-translate-x-full" : "translate-x-0"
+				className={`md:hidden text-neutral-100 fixed top-0 left-0 w-screen h-screen bg-neutral-900/40 shadow-inner shadow-neutral-900/40 z-50 duration-500 ${
+					showNav ? "-translate-x-full opacity-25" : "translate-x-0 opacity-100"
 				}  `}
 			>
-				<div className="px-2 py-4 sm:px-4 w-4/5 h-screen bg-neutral-900">
+				<div className="px-2 py-4 sm:px-4 w-4/5 h-screen bg-neutral-900 shadow-lg shadow-neutral-700">
 					{/* Webpage Title */}
 					<h1
 						className="text-neutral-100 text-xl flex flex-nowrap gap-2 items-center cursor-pointer"
