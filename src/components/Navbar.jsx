@@ -49,7 +49,7 @@ const Navbar = () => {
 								to={id}
 								spy={true}
 								smooth={true}
-								offset={-55}
+								offset={0}
 								duration={500}
 								className="cursor-pointer"
 							>
@@ -63,7 +63,7 @@ const Navbar = () => {
 					to={"contact"}
 					spy={true}
 					smooth={true}
-					offset={-55}
+					offset={0}
 					duration={500}
 					className="hidden cursor-pointer sm:block px-3 py-2 bg-red-500 border-b-2 border-r-2 border-red-800 rounded text-neutral-100 text-lg"
 				>
@@ -92,7 +92,7 @@ const Navbar = () => {
 									to={id}
 									spy={true}
 									smooth={true}
-									offset={-55}
+									offset={0}
 									duration={500}
 									onClick={toggleNav}
 									className="cursor-pointer"
