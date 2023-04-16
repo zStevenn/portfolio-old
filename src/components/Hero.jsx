@@ -16,7 +16,7 @@ function Hero() {
 	return (
 		<div className="container mx-auto max-w-screen-lg">
 			<div
-				className="flex flex-col sm:flex-row justify-center gap-4 px-2 py-4 sm:px-4 pt-10"
+				className="flex flex-col sm:flex-row justify-between gap-4 px-2 py-4 sm:px-4 pt-10"
 				id="hero"
 			>
 				<div ref={textRef} className="text-neutral-100 opacity-0 grid gap-4">
